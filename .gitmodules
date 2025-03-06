@@ -1,0 +1,3 @@
+[submodule "projects/rag"]
+	path = projects/rag
+	url = https://github.com/DIGI-UW/rag.git
