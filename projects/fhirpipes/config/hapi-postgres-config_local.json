@@ -1,0 +1,9 @@
+{
+  "jdbcDriverClass": "org.postgresql.Driver",
+  "databaseService" : "postgresql",
+  "databaseHostName" : "172.17.0.1",
+  "databasePort" : "15432",
+  "databaseUser" : "clinlims",
+  "databasePassword" : "clinlims",
+  "databaseName" : "clinlims"
+}
