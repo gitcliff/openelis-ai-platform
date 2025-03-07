@@ -14,7 +14,7 @@ Acees Pipeline Controller at  http://localhost:8090/
 
 #### Connection to  to the spack DB
 *  user name : hive 
-* Port : 1001
+* Port : 10001
 * Passowrd : ""
 * Databse : default
 
