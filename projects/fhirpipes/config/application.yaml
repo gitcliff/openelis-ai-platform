@@ -33,8 +33,8 @@ fhirdata:
   # There is no Questionnaire in our test FHIR server, but it is added to
   # prevent regression of https://github.com/google/fhir-data-pipes/issues/785.
   # TODO: add resource table creation to e2e tests.
-  resourceList: "Patient,Encounter,Observation,Questionnaire,Condition,Practitioner,Location,Organization,DiagnosticReport,Immunization,MedicationRequest,PractitionerRole,Procedure"
-  numThreads: -1
+  resourceList: "Patient,Observation,Questionnaire,Practitioner,Location,Organization,DiagnosticReport"
+  numThreads: 1
   autoGenerateFlinkConfiguration: true
   createHiveResourceTables: true
   thriftserverHiveConfig: "config/thriftserver-hive-config_local.json"
@@ -45,7 +45,7 @@ fhirdata:
   rowGroupSizeForParquetFiles: 33554432   # 32mb
   viewDefinitionsDir: "config/views"
   createParquetViews: true
-  sinkDbConfigPath: "config/hapi-postgres-config_local_views.json"
+  #sinkDbConfigPath: "config/hapi-postgres-config_local_views.json"
   #sinkFhirServerUrl: "http://sink-server:8080/fhir"
   #sinkUserName: "hapi"
   #sinkPassword: "hapi123"

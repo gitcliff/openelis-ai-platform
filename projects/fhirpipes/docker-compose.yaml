@@ -64,7 +64,6 @@ services:
     ports:
       - '8090:8080'
     networks:
-      - cloudbuild
       - default
     depends_on:
       spark:
@@ -93,7 +92,6 @@ services:
       #- ./postgresql-42.6.0.jar:/opt/bitnami/spark/jars/postgresql-42.6.0.jar
       - spark_vol_single:/opt/bitnami/spark
     networks:
-      - cloudbuild
       - default
     healthcheck:
       test: beeline help || exit 1
@@ -106,7 +104,3 @@ services:
 volumes:
   spark_vol_single:
 
-networks:
-  cloudbuild:
-    external: true
-    name: cloudbuild # Needed for Continuous integration
