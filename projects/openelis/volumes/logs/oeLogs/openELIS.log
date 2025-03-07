@@ -1,0 +1,5 @@
+18 Nov 2024 15:58:32 -- INFO -- Initializing Servlet 'dispatcher'
+18 Nov 2024 15:58:32 -- INFO -- Completed initialization in 23 ms
+18 Nov 2024 15:58:32 -- INFO -- hapi.home is set to /usr/local/tomcat/.
+18 Nov 2024 15:58:32 -- INFO -- HAPI version is: 2.3
+18 Nov 2024 15:58:32 -- INFO -- Default Structure libraries found for HL7 versions 2.5.1, 
