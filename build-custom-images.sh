@@ -2,6 +2,10 @@
 
 ##
 # RAG
+docker build \
+    -t oe-rag:local \
+    -f projects/ai-rag/Dockerfile \
+    projects/ai-rag \
 ##
 filepath="./packages/lnsp-mediator/package-metadata.json"
 envs=$(jq -r '.environmentVariables | to_entries | .[] | "\(.key)=\(.value)"' $filepath)

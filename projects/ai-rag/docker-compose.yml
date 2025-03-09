@@ -1,9 +1,9 @@
 version: '3.8'
 
 services:
-  # Spring Boot RAG SQL Assistant Application
+  # Spring Boot application
   app:
-    build: ../../projects/ai-rag
+    build: .
     ports:
       - "8089:8080"
     environment:
@@ -19,7 +19,7 @@ services:
       - mariadb
       - ollama
 
-  # MariaDB Database
+  # MariaDB database
   mariadb:
     image: mariadb:10.11.7
     restart: always
@@ -28,19 +28,20 @@ services:
       - MARIADB_DATABASE=openmrs
     volumes:
       - mariadb_data:/var/lib/mysql
-      - ../../projects/ai-rag/init-scripts:/docker-entrypoint-initdb.d
+      - ./init-scripts:/docker-entrypoint-initdb.d
     ports:
       - "3307:3306"
 
-  # Ollama Service
+  # Ollama service
   ollama:
     build:
-      context: ../../projects/ai-rag/ollama
+      context: ./ollama
       dockerfile: Dockerfile
     ports:
       - "11434:11434"
     volumes:
       - ollama_data:/root/.ollama
+
 
 volumes:
   mariadb_data:

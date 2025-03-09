@@ -8,6 +8,7 @@ packages:
   - fhir-datastore-hapi-fhir
   - monitoring
   - database-postgres
+  - rag-sql-ai-assistant
 
 profiles:
   - name: dev
